@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce & Bites</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Link style.css -->
+     <link rel="stylesheet" href="assects/css/style.css">
+
+    <style>
+        .contact-section {
+            padding: 140px 0;
+            background-color: #fff;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        .section-title h2 {
+            font-weight: 700;
+            color: var(--dark-color);
+            display: inline-block;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .contact-info {
+            background-color: var(--light-color);
+            padding: 30px;
+            border-radius: 10px;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-info h3 {
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .info-content h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+        
+        .info-content p, .info-content a {
+            color: #666;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .info-content a:hover {
+            color: var(--primary-color);
+        }
+        
+        .contact-form {
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-control {
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        
+        textarea.form-control {
+            height: auto;
+            min-height: 150px;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 12px 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .map-container {
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        @media (max-width: 767.98px) {
+            .contact-info {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navtop info section -->
+    <div class="container py-2 d-none d-md-block">
+    <div class="row justify-content-between align-items-center">
+        
+        <!-- Left Side: Email and Phone -->
+        <div class="col-md-6 d-flex flex-wrap align-items-center gap-3">
+        <div class="d-flex align-items-center gap-2">
+            <i class="fa fa-envelope" aria-hidden="true"></i> info@gmail.com
+        </div>
+        <div class="d-flex align-items-center gap-2">
+            <i class="fa fa-phone" aria-hidden="true"></i> +91 9999 7777 77
+        </div>
+        </div>
+    
+        <!-- Right Side: Social Media -->
+        <div class="col-md-6 d-flex justify-content-md-end align-items-center gap-3 mt-3 mt-md-0">
+        <span>Follow Us:</span>
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        </div>
+    </div>
+    </div>
+    <!-- End navtop section -->
+    
+    <!-- Navigation -->
+    <nav class="border-top navbar navbar-expand-lg navbar-light  position-absolute z-3 w-100" style="background-color: #ffffff">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand " href="#">
+                <img class="img-fluid" src="assects/img/bouncelogo2.png" alt="Bounce & Bites Logo">
+            </a>
+            
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link active " href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Location.html">Locations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link contact-btn" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End navigation -->
+
+    <!-- Contact Us Section -->
+    <section class="contact-section ">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p class="lead">Feel free to reach out — we’re here for you!</p>
+            </div>
+            
+            <div class="row">
+                <!-- Contact Form Column -->
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <div class="contact-form">
+                        <h3 class="mb-4">Send us a message</h3>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Subject">
+                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                    
+                   
+                </div>
+                
+                <!-- Contact Info Column -->
+                <div class="col-lg-5">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fa fa-address-book" aria-hidden="true"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Address</h4>
+                                <p> 5th Floor, Roof Top, IP Grand, Naipokhari, Sigra, Varanasi, Uttar Pradesh 221010</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Phone</h4>
+                                <p><a href="tel:+9771234567890">+977 1234567890</a></p>
+                                <p><a href="tel:+9779876543210">+977 9876543210</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email</h4>
+                                <p><a href="mailto:info.com">info@.com</a></p>
+                                <p><a href="mailto:support.com">support@.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links mt-4">
+                            <h5 class="mb-3">Follow Us</h5>
+                            <a href="#" class="text-decoration-none me-3">
+                                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="text-decoration-none me-3">
+                                <i class="fa fa-instagram" aria-hidden="true" style="color: #e4405f;"></i>
+                            </a>
+                            <a href="#" class="text-decoration-none">
+                                <i class="fa fa-youtube-play" aria-hidden="true" style="color: #cd201f;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End contact us section -->
+
+     <!-- Map Section -->
+     <div class="map-container mt-5">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.6179508979108!2d82.9886197741583!3d25.317037026838598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2db255f2c4f5%3A0xc3e0069fee75cada!2sBounce%20%26%20Bites%20Trampoline%20and%20Adventure%20Park!5e0!3m2!1sen!2sin!4v1745413338567!5m2!1sen!2sin" 
+                allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row">
+                <!-- About Column -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">About Bounce & Bites</h5>
+                    <p>Bounce & Bites is the ultimate fun destination for kids and families, offering exciting attractions and activities that create unforgettable memories.</p>
+                    <div class="mt-4">
+                        <a href="#" class="text-white me-3"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fa fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fa fa-youtube-play"></i></a>
+                    </div>
+                </div> 
+
+                <!-- Quick Links Column -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Gallery</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Locations</a></li>
+                        <!-- <li class="mb-2"><a href="#" class="text-white text-decoration-none">Pricing</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact Us</a></li> -->
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-uppercase mb-4">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fa fa-map-marker me-2"></i> 5th Floor, Roof Top, IP Grand, Naipokhari, Sigra, Varanasi, Uttar Pradesh 221010</li>
+                        <li class="mb-2"><i class="fa fa-phone me-2"></i> +91 12345 67890</li>
+                        <li class="mb-2"><i class="fa fa-envelope me-2"></i> info@BounceBites.in</li>
+                        <li class="mb-2"><i class="fa fa-clock-o me-2"></i> Mon-Sun: 10:00 AM - 8:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="my-4 bg-light">
+
+            <!-- Copyright Row -->
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 Bounce & Bites. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p>Created By : <a class="text-decoration-none text-secondary" href="https://viraladsmedia.com/">viralAdsMedia</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer section -->
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
