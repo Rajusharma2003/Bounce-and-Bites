@@ -149,7 +149,7 @@
     <!-- End Banner section -->
 
      <!-- About Us first Section -->
-     <section class="about-section pb-5">
+     <section class="about-section pb-5" style="background-color: var(--primary-color);">
         <div class="container">
             <div class="row align-items-center">
                 <!-- Image Column -->
@@ -181,10 +181,11 @@
     <!-- End about us section -->
 
     <!-- Benefits section -->
-    <div class="container-fluid py-4"  style="background-image: url('https://img.freepik.com/premium-photo/friends-having-fun-day-trampoline-park-with-jumps-flips-joyful-faces-capturing-active_868783-48133.jpg?ga=GA1.1.332943406.1726205077&semt=ais_hybrid&w=740'); 
+    <div class="container-fluid py-4"  style="background-image: url('https://img.freepik.com/premium-photo/friends-having-fun-day-trampoline-park-with-jumps-flips-joyful-faces-capturing-active_868783-48133.jpg?ga=GA1.1.332943406.1726205077&semt=ais_hybrid&w=740' ); 
         background-size: cover; 
         background-position: center; 
-        background-repeat: no-repeat;">
+        background-repeat: no-repeat;
+        ">
 
         <h1 class="text-center text-white py-5" style="font-size: 5rem;"> Benefits of  <span style=" color: var(--primary-color);">Trampoline</span> </h1>
 
@@ -241,7 +242,7 @@
     <!-- End benefits section -->
 
     <!-- Product section -->
-     <div class="container-fluid mt-5" style="background-image: linear-gradient(rgb(0 0 0 / 76%), rgb(0 0 0 / 36%)), url('https://img.freepik.com/premium-photo/vibrant-gymnastics-arena-featuring-balance-beams-dynamic-routines-highlighting-graceful-movements-concept-gymnastics-balance-beams-routines-graceful-movements-vibrant-arena_864588-281725.jpg?ga=GA1.1.332943406.1726205077&semt=ais_hybrid&w=740'); 
+     <div class="container-fluid " style="background-image: linear-gradient(rgb(0 0 0 / 76%), rgb(0 0 0 / 36%)), url('https://img.freepik.com/premium-photo/vibrant-gymnastics-arena-featuring-balance-beams-dynamic-routines-highlighting-graceful-movements-concept-gymnastics-balance-beams-routines-graceful-movements-vibrant-arena_864588-281725.jpg?ga=GA1.1.332943406.1726205077&semt=ais_hybrid&w=740'); 
         background-size: cover; 
         background-position: center; 
         background-repeat: no-repeat;
@@ -334,8 +335,28 @@
     </div>
     <!-- End -->
 
+    <!-- Catch stick section -->
+     <div class="container-fluid" style="background-color: var(--primary-color);">
+        <!-- This is the content section -->
+       <div class="container">
+         <div class="row justify-content-center align-items-center pt-5">
+            <div class="col-md-7">
+                <h1 class="">magnetic catcher ( Stick Catcher )</h1>
+                <p class="">Get ready for double the fun at Bounce and Bites, your ultimate destination for thrilling trampoline adventures and delicious treats—all under one roof in Banaras! Jump, flip, and soar through our exciting trampoline zones, then recharge with a mouth-watering selection of snacks, beverages, and meals at our in-house café. Whether you're here with friends, family, or planning a special celebration, Bounce and Bites offers the perfect blend of energy and flavor to make your day unforgettable. Come bounce, come bite—only at Banaras’s favorite fun zone!</p>
+            </div>
+
+            <!-- This is the img section -->
+            <div class="col-md-5">
+                <img class="img-fluid rounded-5" src="https://img.freepik.com/free-photo/colorful-preschool-building-filled-with-playful-children-generated-by-ai_188544-54092.jpg?ga=GA1.1.332943406.1726205077&w=740" alt="">
+            </div>
+        </div>
+       </div>
+     </div>
+    <!--End Catch stick -->
+
     <!-- Gallery section -->
-    <div class="container py-5">
+    <div class="container-fluid" style="background-color: var(--primary-color);">
+        <div class="container py-5" >
         <h1 class="text-center py-4">Gallery</h1>
         <div class="row g-4"> <!-- Added gutter spacing with g-4 -->
             <!-- First Column -->
@@ -377,7 +398,30 @@
             </div>
         </div>
     </div>
+    </div>
     <!-- End Gallery section -->
+
+     <!-- Map Section -->
+     <div class="map-container ">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.6179508979108!2d82.9886197741583!3d25.317037026838598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2db255f2c4f5%3A0xc3e0069fee75cada!2sBounce%20%26%20Bites%20Trampoline%20and%20Adventure%20Park!5e0!3m2!1sen!2sin!4v1745413338567!5m2!1sen!2sin" 
+                allowfullscreen="" loading="lazy"></iframe>
+
+                <style>
+                    .map-container {
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+                </style>
+    </div>
 
     <!-- Footer Section -->
     <footer class="bg-dark text-white pt-5 pb-4">
